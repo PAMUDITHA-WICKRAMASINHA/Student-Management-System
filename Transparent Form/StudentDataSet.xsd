@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StudentDataSet" targetNamespace="http://tempuri.org/StudentDataSet.xsd" xmlns:mstns="http://tempuri.org/StudentDataSet.xsd" xmlns="http://tempuri.org/StudentDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="studentdbConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="studentdbConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Transparent_Form.Properties.Settings.GlobalReference.Default.studentdbConnectionString1" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="studentdbConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="studentdbConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Transparent_Form.Properties.Settings.GlobalReference.Default.studentdbConnectionString2" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StudentDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StudentDataSet" msprop:Generator_UserDSName="StudentDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="student" msprop:Generator_TableClassName="studentDataTable" msprop:Generator_TableVarName="tablestudent" msprop:Generator_TablePropName="student" msprop:Generator_RowDeletingName="studentRowDeleting" msprop:Generator_RowChangingName="studentRowChanging" msprop:Generator_RowEvHandlerName="studentRowChangeEventHandler" msprop:Generator_RowDeletedName="studentRowDeleted" msprop:Generator_UserTableName="student" msprop:Generator_RowChangedName="studentRowChanged" msprop:Generator_RowEvArgName="studentRowChangeEvent" msprop:Generator_RowClassName="studentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StdId" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStdId" msprop:Generator_ColumnPropNameInRow="StdId" msprop:Generator_ColumnPropNameInTable="StdIdColumn" msprop:Generator_UserColumnName="StdId" type="xs:int" />
+              <xs:element name="StdFirstName" msprop:Generator_ColumnVarNameInTable="columnStdFirstName" msprop:Generator_ColumnPropNameInRow="StdFirstName" msprop:Generator_ColumnPropNameInTable="StdFirstNameColumn" msprop:Generator_UserColumnName="StdFirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StdLastName" msprop:Generator_ColumnVarNameInTable="columnStdLastName" msprop:Generator_ColumnPropNameInRow="StdLastName" msprop:Generator_ColumnPropNameInTable="StdLastNameColumn" msprop:Generator_UserColumnName="StdLastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Birthdate" msprop:Generator_ColumnVarNameInTable="columnBirthdate" msprop:Generator_ColumnPropNameInRow="Birthdate" msprop:Generator_ColumnPropNameInTable="BirthdateColumn" msprop:Generator_UserColumnName="Birthdate" type="xs:dateTime" />
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Photo" msprop:Generator_ColumnVarNameInTable="columnPhoto" msprop:Generator_ColumnPropNameInRow="Photo" msprop:Generator_ColumnPropNameInTable="PhotoColumn" msprop:Generator_UserColumnName="Photo" type="xs:base64Binary" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:student" />
+      <xs:field xpath="mstns:StdId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
